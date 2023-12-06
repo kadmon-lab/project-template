@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# see https://godatadriven.com/blog/a-practical-guide-to-setuptools-and-pyproject-toml/
+# https://stackoverflow.com/questions/32688688/how-to-write-setup-py-to-include-a-git-repository-as-a-dependency/54701434#54701434
+
+[project]
+name = "project"
+version = "0.1.0"
+authors = [
+  { name="Jan Bauer", email="japhba@users.noreply.github.com" },
+]
+description = "Template for science projects. "
+
+# name = example
+# version = attr: example.__version__
+# author = You
+# author_email = your@email.address
+# description = Example package description
+# long_description = file: README.md
+# long_description_content_type = text/markdown
+# keywords = example, setuptools
+# license = BSD 3-Clause License
+# classifiers =
+#     License :: OSI Approved :: BSD License
+#     Programming Language :: Python :: 3
+
+dependencies = [
+"matplotlib",
+"numpy",
+
+# custom
+# joblib = { git = "https://github.com/japhba/joblib.git", branch = "main" }
+# "gptools @ git+https://github.com/japhba/gp_tools.git -e",
+# "-e np_cache @ git+https://github.com/japhba/np-cache.git",
+]
+
+[tool.setuptools.packages]
+find = {}
